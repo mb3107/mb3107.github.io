@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+    <title>Woody wood maker - Boutique d'objets artisanaux en ligne</title>
+</head>
+
+<body>
+
+    
+    // Add the PayPal JavaScript SDK with both buttons and marks components
+<script src="https://www.paypal.com/sdk/js?client-id=test&components=buttons,marks"></script>
+// Render the radio buttons and marks
+<label>
+  <input type="radio" name="payment-option" value="paypal" checked>
+  <img src="paypal-mark.jpg" alt="Pay with PayPal">
+</label>
+<label>
+  <input type="radio" name="payment-option" value="alternate">
+  <div id="paypal-marks-container"></div>
+</label>
+<div id="paypal-buttons-container"></div>
+<div id="alternate-button-container">
+  <button>Pay with a different method</button>
+</div>
+<script>
+  // Render the PayPal marks
+  paypal.Marks().render('#paypal-marks-container');
+  // Render the PayPal buttons
+  paypal.Buttons().render('#paypal-buttons-container');
+  // Listen for changes to the radio buttons
+  document.querySelectorAll('input[name=payment-option]')
+    .forEach(function (el) {
+      el.addEventListener('change', function (event) {
+        // If PayPal is selected, show the PayPal button
+        if (event.target.value === 'paypal') {
+          document.body.querySelector('#alternate-button-container')
+            .style.display = 'none';
+          document.body.querySelector('#paypal-button-container')
+            .style.display = 'block';
+        }
+        // If alternate funding is selected, show a different button
+        if (event.target.value === 'alternate') {
+          document.body.querySelector('#alternate-button-container')
+            .style.display = 'block';
+          document.body.querySelector('#paypal-button-container')
+            .style.display = 'none';
+        }
+      });
+    });
+
+  // Hide non-PayPal button by default
+  document.body.querySelector('#alternate-button-container')
+    .style.display = 'none';
+</script>
+
+
+
+
+
+
+
+    <section id="home" class="home-container">
+        <header id="header" class="header">
+            <img src="images/logo transparent fini.PNG" alt="Woody Wood Maker" class="logo de l'entreprise">
+            <ul class="nav-links">
+                <li>
+                    <a href="#contact" data-text="contact">contact</a>
+                </li>
+                <li>
+                    <a href="#best-sales" data-text="Nos meilleures ventes">Nos meilleures ventes</a>
+                </li>
+                <li>
+                    <a href="#plants" data-text="Nos plantes">Nos planches</a>
+                </li>
+            </ul>
+            <div class="burger-container">
+                <div class="burger"></div>
+            </div>
+        </header>
+
+        <div class="landing">
+            <h1 class="big-title">Woody Wood Maker: <br> Ensembles sulptons votre bonheur.</h1>
+            <a href="#delivery" class="delivery-link">
+                <span class="scroll-text" data-text="Scroll">Scroll</span>
+                <i class="scroll-icon fas fa-angle-down"></i>
+            </a>
+        </div>
+    <div class="container">
+
+        <h1 class="titre-description">Bienvenue chez Woody Wood Maker <br></h1>
+        <h2 class="sous-titre-description">Votre destination en ligne
+            pour des objets artisanaux en bois uniques.
+            <h2 class="description">Découvrez l'art du bois à travers <i class="i-description">notre sélection unique en
+                    ligne.</i>
+                Chez Woody Wood Maker, chaque objet artisanal en bois est conçu avec
+                passion et soin. <br> De<i class="i-description"> la cuisine à la déco</i>, explorez des pièces uniques
+                <i class="i-description">alliant style et durabilité.</i> Optez pour la qualité avec nos matériaux
+                écologiques. Chaque achat chez nous raconte une histoire, car
+                <i class="i-description">chaque article est unique. Faites de votre achat une déclaration de style.</i>
+                Commandez maintenant et embrassez l'essence naturelle
+                de l'artisanat en bois avec <i class="i-description">Woody Wood Maker</i> <br> Merci de nous choisir
+                <i class="i-description">pour égayer</i> votre quotidien ! 🌿✨
+        </section>
+
+
+
+
+
+    </div>
+
+    <section id="delivery" class="delivery-container">
+        <div class="shop">
+            <i class="delivery-icon fas fa-store"></i>
+            <p class="box-content">
+                Bientôt en magasin
+            </p>
+        </div>
+        <div class="withdrawal">
+            <i class="delivery-icon fas fa-people-carry"></i>
+            <p class="box-content">
+                point relais
+            </p>
+        </div>
+        <div class="delivery">
+            <i class="delivery-icon fas fa-truck"></i>
+            <p class="box-content">
+                Livraison à domicile
+            </p>
+        </div>
+    </section>
+    <section id="best-sales" class="best-sales-container">
+        <h1 class="section-title">Meilleures ventes</h1>
+        <div class="best-plants">
+            <a href="#" class="plant-box no-grid plant1">
+                <div class="plant-bio">
+                    <h1 class="plant-name">Planche 1</h1>
+                    <h3 class="plant-price">29,99€</h3>
+                </div>
+            </a>
+            <a href="#" class="plant-box no-grid plant2">
+                <div class="plant-bio">
+                    <h1 class="plant-name">Planche 2</h1>
+                    <h3 class="plant-price">29,99€</h3>
+                </div>
+            </a>
+            <a href="#" class="plant-box no-grid plant3">
+                <div class="plant-bio">
+                    <h1 class="plant-name">Planche 3</h1>
+                     <h3 class="plant-price">29,99€</h3>
+                </div>
+            </a>
+    </section>
+    <section id="plants" class="plants-container">
+        <h1 class="section-title">Nos planches</h1>
+        <div class="grid-plants">
+            <a href="#" class="plant-box grid plant-grid1">
+                <div class="plant-bio">
+                    <h1 class="plant-name">planche 1</h1>
+                    <h3 class="plant-price">29,99€</h3>
+                </div>
+            </a>
+            <a href="#" class="plant-box grid plant-grid2">
+                <div class="plant-bio">
+                    <h1 class="plant-name">Planche 2</h1>
+                    <h3 class="plant-price">29,99€</h3>
+                </div>
+            </a>
+            <a href="#" class="plant-box grid plant-grid3">
+                <div class="plant-bio">
+                    <h1 class="plant-name">Planche 3</h1>
+                    <h3 class="plant-price">29,99€</h3>
+                </div>
+            </a>
+            <a href="#" class="plant-box grid plant-grid4">
+                <div class="plant-bio">
+                    <h1 class="plant-name">Planche 4</h1>
+                    <h3 class="plant-price">29,99€</h3>
+                </div>
+            </a>
+            <a href="#" class="plant-box grid plant-grid5">
+                <div class="plant-bio">
+                    <h1 class="plant-name">Planche 5</h1>
+                    <h3 class="plant-price">29,99€</h3>
+                </div>
+            </a>
+            <a href="#" class="plant-box grid plant-grid6">
+                <div class="plant-bio">
+                    <h1 class="plant-name">Planche 6</h1>
+                    <h3 class="plant-price">29,99€</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="contact" class="contact-container">
+    <p class="contact-container">contact: <br>la.passionduboi@gmail.com</p>
+
+    </section>
+    <footer id="footer" class="footer">
+        <span class="copyrights">&copy; 2024 - Woody Wood Maker</span>
+        <a href="#" class="conditions">Condition générales de vente <br> tous droits réservés</a>
+    </footer>
+    <script>
+        const burgerContainer = document.querySelector('.burger-container');
+        const navLinks = document.querySelector('.nav-links');
+
+        burgerContainer.addEventListener('click', () => {
+            burgerContainer.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        })
+    </script>
+</body>
+
+</html>
